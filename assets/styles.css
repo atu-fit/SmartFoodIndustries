@@ -68,8 +68,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .scrolled .topbar { border-bottom-color: rgba(244, 239, 228, 0.12); }
 .topbar__in { display: flex; align-items: center; gap: 20px; height: 68px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-size: 15px; white-space: nowrap; }
-.brand__logo { display: flex; align-items: center; padding: 6px 12px; border-radius: 10px; background: var(--paper); }
-.brand__logo img { height: 26px; width: auto; }
+.brand__logo { display: flex; align-items: center; }
+.brand__logo img { height: 30px; width: auto; }
 .brand__text { font-family: var(--display); font-weight: 700; letter-spacing: .02em; }
 .btn--outline { border-color: var(--forest); color: var(--forest); background: transparent; margin-top: 10px; }
 .btn--outline:hover { background: var(--forest); color: var(--cream); }
