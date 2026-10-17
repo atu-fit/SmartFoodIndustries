@@ -4,7 +4,9 @@ const CONFIG = {
   registrationUrl: "https://forms.gle/gDgKDPFRtabXVDjP6",
   start: "2026-11-12T10:00:00+05:00",
   end: "2026-11-12T16:00:00+05:00",
-  defaultLang: "ru"
+  defaultLang: "ru",
+  // Подробные требования к трекам (MVP, результат, формат демонстрации). В день старта поставьте true
+  showTrackDetails: false
 };
 /* ===================================== */
 
@@ -86,12 +88,12 @@ const CONFIG = {
         });
         body.append(ol);
       }
-      (tr.extras || []).forEach((ex) => {
+      (CONFIG.showTrackDetails ? tr.extras || [] : []).forEach((ex) => {
         const ul = el("ul", "bul");
         ex.items.forEach((x) => ul.append(el("li", null, x)));
         body.append(el("p", "track__label", ex.title), ul);
       });
-      if (tr.note) body.append(el("p", "track__note", tr.note));
+      if (CONFIG.showTrackDetails && tr.note) body.append(el("p", "track__note", tr.note));
       const tags = el("ul", "tags");
       tr.tags.forEach((x) => tags.append(el("li", null, x)));
       a.append(body, tags);
