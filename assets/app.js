@@ -5,7 +5,7 @@ const CONFIG = {
   start: "2026-11-12T10:00:00+05:00",
   end: "2026-11-12T16:00:00+05:00",
   defaultLang: "ru",
-  // Подробные требования к трекам (MVP, результат, формат демонстрации). В день старта поставьте true
+  // Проблема, задача и требования к трекам (MVP, результат, формат демонстрации). В день старта поставьте true
   showTrackDetails: false
 };
 /* ===================================== */
@@ -73,9 +73,11 @@ const CONFIG = {
       if (tr.pending) head.append(el("span", "badge", t.tracks.soon));
       a.append(head, el("h3", "track__name", tr.name));
       const body = el("div", "track__body");
-      if (!tr.pending) body.append(el("p", "track__label", t.tracks.problem));
-      body.append(el("p", null, tr.problem));
-      if (tr.task) {
+      if (CONFIG.showTrackDetails) {
+        if (!tr.pending) body.append(el("p", "track__label", t.tracks.problem));
+        body.append(el("p", null, tr.problem));
+      }
+      if (CONFIG.showTrackDetails && tr.task) {
         body.append(el("p", "track__label", t.tracks.task), el("p", null, tr.task));
       }
       if (tr.directions) {
