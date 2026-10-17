@@ -77,6 +77,7 @@ const CONFIG = {
         body.append(el("p", "track__label", t.tracks.task), el("p", null, tr.task));
       }
       if (tr.directions) {
+        if (tr.dirsTitle) body.append(el("p", "track__label", tr.dirsTitle));
         const ol = el("ol", "dirs");
         tr.directions.forEach(([h, p]) => {
           const li = el("li");
@@ -85,6 +86,12 @@ const CONFIG = {
         });
         body.append(ol);
       }
+      (tr.extras || []).forEach((ex) => {
+        const ul = el("ul", "bul");
+        ex.items.forEach((x) => ul.append(el("li", null, x)));
+        body.append(el("p", "track__label", ex.title), ul);
+      });
+      if (tr.note) body.append(el("p", "track__note", tr.note));
       const tags = el("ul", "tags");
       tr.tags.forEach((x) => tags.append(el("li", null, x)));
       a.append(body, tags);
