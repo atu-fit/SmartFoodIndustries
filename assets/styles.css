@@ -128,7 +128,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .cd__n { font: 700 30px/1 var(--display); font-variant-numeric: tabular-nums; }
 .cd__u { margin-top: 6px; font-size: 12px; color: rgba(244, 239, 228, .65); }
 
-.facts { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; margin: 26px 0 0; background: rgba(244, 239, 228, .14); border-radius: 14px; overflow: hidden; }
+.facts { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; margin: 26px 0 0; background: rgba(244, 239, 228, .14); border-radius: 14px; overflow: hidden; }
 .fact { background: var(--forest-2); padding: 16px 18px; }
 .fact dt { font: 500 11.5px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: rgba(244, 239, 228, .55); }
 .fact dd { margin: 6px 0 0; font-weight: 600; font-size: 16px; line-height: 1.3; }
