@@ -9,8 +9,8 @@ DTSTAMP:20261010T000000Z
 DTSTART:20261112T050000Z
 DTEND:20261112T110000Z
 SUMMARY:Smart Food Industries — хакатон ATU
-DESCRIPTION:Шестичасовой студенческий хакатон ATU. Сбор с 09:30\, старт в 10:00. АТУ\, корпус 2С.
-LOCATION:АТУ\, корпус 2С
+DESCRIPTION:Шестичасовой студенческий хакатон ATU. Сбор с 09:30\, старт в 10:00. АТУ\, корпус 407-2С.
+LOCATION:АТУ\, корпус 407-2С
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
