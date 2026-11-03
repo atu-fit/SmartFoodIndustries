@@ -155,8 +155,6 @@ const CONFIG = {
       li.append(el("span", "podium__place", place), el("strong", null, sum), el("span", "podium__dip", dip));
       return li;
     });
-    fill("noms", t.prizes.noms, (x) => el("li", null, x));
-    fill("after", t.prizes.after, (x) => el("li", null, x));
 
     fill("dates", t.register.dates, ([d, p]) => {
       const li = el("li");

@@ -260,13 +260,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .podium__1 { order: 2; background: var(--tomato); color: #fff; min-height: 240px; justify-content: end; }
 .podium__2 { order: 1; background: var(--forest); color: var(--cream); min-height: 200px; justify-content: end; }
 .podium__3 { order: 3; background: var(--tint); min-height: 170px; justify-content: end; }
-.prizes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-.noms { display: grid; gap: 8px; }
-.noms li { padding: 14px 18px; border-radius: 14px; background: var(--paper); border: 1px solid var(--line); font-weight: 600; display: flex; gap: 12px; align-items: center; }
-.noms li::before { content: "★"; color: var(--mustard); font-size: 18px; }
-.after { display: grid; gap: 12px; }
-.after li { position: relative; padding-left: 30px; color: var(--ink-2); }
-.after li::before { content: "→"; position: absolute; left: 0; color: var(--tomato-ink); font-weight: 700; }
 
 /* register */
 .register { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: start; }
@@ -314,7 +307,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .steps { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 900px) {
-  .hero__in, .about__grid, .criteria__grid, .register, .faq, .prizes__grid { grid-template-columns: 1fr; }
+  .hero__in, .about__grid, .criteria__grid, .register, .faq { grid-template-columns: 1fr; }
   .hero__visual { order: -1; max-width: 300px; margin: 0 auto; }
   .facts { grid-template-columns: repeat(2, 1fr); }
   .fact:last-child { grid-column: span 2; }
