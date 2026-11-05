@@ -1,7 +1,5 @@
 /* ===== Настройки — меняйте здесь ===== */
 const CONFIG = {
-  // Ссылка на форму регистрации (Google Forms, MS Forms и т.п.). Пока пусто — кнопка показывает «скоро».
-  registrationUrl: "https://forms.gle/gDgKDPFRtabXVDjP6",
   start: "2026-11-12T10:00:00+05:00",
   end: "2026-11-12T16:00:00+05:00",
   defaultLang: "ru",
@@ -161,17 +159,6 @@ const CONFIG = {
       li.append(el("b", null, d), el("span", null, p));
       return li;
     });
-    fill("formList", t.register.form, (x) => el("li", null, x));
-    const btn = $("#regBtn");
-    if (CONFIG.registrationUrl) {
-      btn.href = CONFIG.registrationUrl;
-      btn.textContent = t.register.button + " →";
-      btn.removeAttribute("aria-disabled");
-    } else {
-      btn.removeAttribute("href");
-      btn.textContent = t.register.pending;
-      btn.setAttribute("aria-disabled", "true");
-    }
 
     fill("orgList", t.org.list, ([h, p]) => {
       const li = el("li");

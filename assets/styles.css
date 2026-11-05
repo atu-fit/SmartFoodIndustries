@@ -262,7 +262,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .podium__3 { order: 3; background: var(--tint); min-height: 170px; justify-content: end; }
 
 /* register */
-.register { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: start; }
+.register { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start; max-width: 760px; }
 .section--accent .lead { color: rgba(19, 36, 27, .82); }
 .dates { margin-top: 30px; display: grid; gap: 0; border-top: 2px solid var(--ink); }
 .dates li { display: grid; grid-template-columns: 170px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(19, 36, 27, .25); }
