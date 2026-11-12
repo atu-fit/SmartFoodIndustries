@@ -179,7 +179,6 @@ const CONFIG = {
     const t = C[lang].hero;
     const box = $("#countdown .countdown__cells");
     const label = $("#countdown .countdown__label");
-    const start = new Date(CONFIG.start).getTime();
     const end = new Date(CONFIG.end).getTime();
     clearInterval(tick);
     const cells = t.units.map((u) => {
@@ -192,10 +191,10 @@ const CONFIG = {
     function upd() {
       const now = Date.now();
       if (now >= end) { label.textContent = t.ended; box.hidden = true; clearInterval(tick); return; }
-      if (now >= start) { label.textContent = t.live; box.hidden = true; markNow(); return; }
+      markNow();
       label.textContent = t.countdownLabel;
       box.hidden = false;
-      let s = Math.floor((start - now) / 1000);
+      let s = Math.floor((end - now) / 1000);
       const v = [Math.floor(s / 86400), Math.floor((s % 86400) / 3600), Math.floor((s % 3600) / 60), s % 60];
       v.forEach((x, i) => (cells[i].n.textContent = String(x).padStart(2, "0")));
     }
